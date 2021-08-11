@@ -7,6 +7,8 @@ section {
     background-color:rgb(197, 248, 248);
 }
 
+
+
 /* selectores anidados, padre espacio y el hijo */
 
 section h1 {
@@ -99,4 +101,116 @@ input[type="checkbox"]:checked ~ .modal {
 label[for="open"]:hover {
     background-color: blueviolet;
     transition: 0.2s linear;
+}
+
+/* Index 2 */
+.hero{
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    padding: 100px;
+    /* background-image: url('https://wallpapercave.com/wp/bc9PYTV.jpg'); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    position: relative;
+    z-index: 0;
+    /* filter: grayscale(100%) blur(5px); */
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallpapercave.com/wp/bc9PYTV.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    filter: grayscale(100%) blur(5px) ;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.index-2{
+    background-color: transparent;
+}
+
+.index-2 article ul li{
+    color: orange;
+    font-size: 2rem;
+}
+iframe{
+    filter: grayscale(100%) contrast(100%) invert(100%);
+    width: 100%;
+}
+
+span{
+    margin: 50px auto;
+    font-size: 2rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+span::before{
+    content: '<';
+    font-size: 45px;
+    margin-right: 15px;
+}
+
+span::after{
+    content: '>';
+    font-size: 45px;
+    margin-left: 15px;
+}
+
+.index-2 h1{
+    margin: 50px;
+    text-align: center;
+}
+
+p{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+p::first-letter{
+    font-size: 70px;
+    color: #444;
+}
+
+p::first-line{
+    font-style: oblique;
+}
+
+/* @media(max-width: 640px) and (min-width: 320px){
+    p{
+        width: 90%;
+        font-size: 50px;
+    };
+    .hero{
+        font-size: 18px;
+    }
+} */
+
+/* @media(max-width: 640px) and (orientation: landscape){
+    p{
+        width: 90%;
+        font-size: 50px;
+    };
+    .hero{
+        font-size: 18px;
+    }
+} */
+
+@media(max-width: 640px) and (orientation: portrait){
+    p{
+        width: 90%;
+        font-size: 50px;
+    };
+    .hero{
+        font-size: 18px;
+    }
 }
